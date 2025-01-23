@@ -3,6 +3,9 @@ import { Roboto } from "next/font/google";
 import "@/styles/globals.css";
 import SideNavigation from "@/components/common/navigation/SideNavigation";
 
+//Shadcn
+import { Toaster } from "@/components/ui/toaster";
+
 const roobto = Roboto({
   weight: ["400", "500", "700"],
   subsets: ["latin"],
@@ -23,6 +26,7 @@ export default function RootLayout({
       <body className={`${roobto.className} antialiased`}>
         <SideNavigation />
         {children}
+        <Toaster />
       </body>
     </html>
   );
